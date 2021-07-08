@@ -2,7 +2,7 @@ import time
 from selenium import webdriver 
 PATH = "C:/ProgramData/Anaconda3/scripts/chromedriver.exe" #always keeps chromedriver.exe inside scripts to save hours of debugging
 driver =webdriver.Chrome(PATH) #preety i,portant part
-driver.get("https://en.wikipedia.org/wiki/Main_Page")
+driver.get("")
 languages = driver.find_elements_by_class_name('interlanguage-link')
 language_names = [language.find_element_by_css_selector('a').text 
                  for language in languages]
