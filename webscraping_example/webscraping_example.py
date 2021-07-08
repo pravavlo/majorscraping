@@ -1,3 +1,5 @@
+from logging import exception
+from typing import Text
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
@@ -10,6 +12,12 @@ import csv
 from selenium import webdriver 
 PATH = "C:/ProgramData/Anaconda3/scripts/chromedriver.exe" #always keeps chromedriver.exe inside scripts to save hours of debugging
 driver =webdriver.Chrome(PATH) #preety i,portant part
-driver.get("https://hamrobazaar.com/")
-#languages = driver.find_elements_by_class_name('interlanguage-link') #do it yes 
+driver.get("https://www.gharghaderi.com/")
+driver.implicitly_wait(10)
+house = driver.find_elements_by_class_name('griddetails')
+for x in house:
+    driver.get(x)
+
+print(x.text)
+
 
