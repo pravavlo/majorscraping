@@ -11,13 +11,14 @@ from selenium.webdriver.common.keys import Keys
 import csv
 from selenium import webdriver 
 PATH = "C:/ProgramData/Anaconda3/scripts/chromedriver.exe" #always keeps chromedriver.exe inside scripts to save hours of debugging
-driver =webdriver.Chrome(PATH) #preety i,portant part
+driver =webdriver.Chrome(PATH) #preety important part
 driver.get("https://www.gharghaderi.com/")
 driver.implicitly_wait(10)
+# house = driver.find_elements_by_class_name('griddetails')
+# for x in house:
+#     driver.get(x)
+# print(x.text)
 house = driver.find_elements_by_class_name('griddetails')
 for x in house:
-    driver.get(x)
-
-print(x.text)
-
+   print(x.text)
 
