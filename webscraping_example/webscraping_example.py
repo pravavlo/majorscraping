@@ -25,6 +25,9 @@ data = {
          'Details': house_list,
          'roads' : house_list
         }
-df = pd.DataFrame.from_dict(data,)
+df = pd.DataFrame.from_dict(data)
 df.to_csv('housingresult.csv', index = 0)
+#
+
+
 
