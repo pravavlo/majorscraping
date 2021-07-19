@@ -18,7 +18,6 @@ house = driver.find_elements_by_class_name('griddetails')
 for x in house:
    print(x.text)
    house_list = []
-house = driver.find_elements_by_class_name('griddetails')
 for x in house:
    house_list.append(x.text)
 data = {
@@ -27,7 +26,7 @@ data = {
         }
 df = pd.DataFrame.from_dict(data)
 df.to_csv('housingresult.csv', index = 0)
-
+#this comment should not be visible in another branch....
 
 
 
