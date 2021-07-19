@@ -27,7 +27,7 @@ data = {
         }
 df = pd.DataFrame.from_dict(data)
 df.to_csv('housingresult.csv', index = 0)
-#
+
 
 
 
