@@ -27,8 +27,6 @@ data = {
         }
 df = pd.DataFrame.from_dict(data)
 df.to_csv('housingprices.csv')
-
-=======
 driver.implicitly_wait(20)
 driver.get("https://www.gharbazar.com/property/search/?_q=&_vt=1&_r=0&_pt=residential&_si=0&_srt=latest")
 links = driver.find_elements_by_xpath("//div[@id = 'search-properties']/a")
@@ -64,22 +62,5 @@ data = {
          'Links':pagelinks 
         }
 df = pd.DataFrame.from_dict(data)
-df.to_csv('housinglinks.csv', index = 0)        
-
-
-
-  
-        
-
-
-
-
-
-
-
-
-
-
-
-   
+df.to_csv('housinglinks.csv', index = 0)  
 >>>>>>> alter
