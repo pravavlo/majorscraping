@@ -41,7 +41,7 @@ while True:
             break
 print(len(pagelinks))
 for i in range(len(pagelinks)):
-        print(pagelinks[i])
+        print(pagelinks[i]) 
 data = {
          'Links':pagelinks 
         }
