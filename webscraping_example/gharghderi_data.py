@@ -27,24 +27,6 @@ while(isDisplayed()):
         time.sleep(3)
     except:
         print("you have reached end of the list no more houses to be shown")    
-      
-               
-         
-
-           
-       
-       
-
-       
-
-
-    
-         
-          
-
-
-
-
 # for x in house:
 #    print(x.text)
 #    house_list = []
