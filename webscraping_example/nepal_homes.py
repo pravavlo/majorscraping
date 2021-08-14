@@ -15,6 +15,24 @@ PATH = "C:/ProgramData/Anaconda3/scripts/chromedriver.exe" #always keeps chromed
 driver =webdriver.Chrome(PATH) #preety important part
 driver.get("https://www.nepalhomes.com/list/&sort=1&find_property_purpose=5db2bdb42485621618ecdae6&find_property_category=5d660cb27682d03f547a6c4a")
 driver.implicitly_wait(10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 home_links=[]
 try:
     nepahome_links=driver.find_elements_by_xpath("//div[@id='app']/div[1]/div/div/div/div[2]/div[3]/a")
@@ -30,5 +48,5 @@ data = {
     'Links':home_links 
     }
 df = pd.DataFrame.from_dict(data)
-df.to_csv('homes.csv', index = 0,  header=False)  
+df.to_csv('homie.csv', index = 0,  header=False)  
 driver.quit()
