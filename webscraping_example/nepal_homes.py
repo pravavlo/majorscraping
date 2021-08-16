@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 import pandas as pd
+import requests
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
@@ -18,16 +19,25 @@ driver.implicitly_wait(10)
 data_extract= pd.read_csv(r'F:\github projects\homie.csv')
 de = data_extract['Links'].tolist()
 data=[]
-price=[]
-for i in range(0,9):
-    final = de[i]
-    try:
-        price =driver.get_elements_by_xpath('text-3xl font-bold leading-none text-black')
-    except:
-        print("none") 
-    price.text
-    print(price)  
+# for url in de[0:]:
+#     driver.get(url)
+#     prices = driver.find_elements_by_css_selector('.text-3xl.font-bold.leading-none.text-black')[1]
+#     for price in prices:
+#      data.append(price.text)
+#      print(data)
+    # try:
+    #     price =driver.find_elements_by_class_name('text-3xl font-bold leading-none text-black')
+    # except NoSuchElementException:
+    #     pass     
+    # data.append(price)
+    # print(data)  
+url = 'https://www.nepalhomes.com/api/property/public/data?&sort=1&find_property_purpose=5db2bdb42485621618ecdae6&find_property_category=5d660cb27682d03f547a6c4a'
 
+r = requests.get(url)
+info = r.json()
+
+for i in info['data']:
+    print([i['basic']['title'],i['price']['value']])
     
     
 
