@@ -17,7 +17,22 @@ driver.get("https://www.nepalhomes.com/list/&sort=1&find_property_purpose=5db2bd
 driver.implicitly_wait(10)
 data_extract= pd.read_csv(r'F:\github projects\homie.csv')
 de = data_extract['Links'].tolist()
-print('array:',de)
+data=[]
+price=[]
+for i in range(0,9):
+    final = de[i]
+    try:
+        price =driver.get_elements_by_xpath('text-3xl font-bold leading-none text-black')
+    except:
+        print("none") 
+    price.text
+    print(price)  
+
+    
+    
+
+    
+
 
 
 
