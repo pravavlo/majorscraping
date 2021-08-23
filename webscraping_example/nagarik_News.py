@@ -1,5 +1,5 @@
 from logging import exception
-from typing import Text
+from typing import NewType, Text
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
@@ -23,6 +23,6 @@ mapped ={
     'sentences': words
 }    
 df = pd.DataFrame.from_dict(mapped)    
-df.to_csv('news.csv', index = 0)
+df.to_csv('New.csv',encoding='utf-8-sig',index=False,header=True)
 
 
