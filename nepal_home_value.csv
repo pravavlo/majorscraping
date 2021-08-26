@@ -1,9 +1,9 @@
-price,name
-"3,80,00,000",Bungalow house for sale at Mandikhatar
-"3,80,00,000",Brand new house for sale in Baluwakhani
-"2,90,00,000","Bungalow house for sale in Bhangal, Budhanilkantha"
-"2,75,00,000",Commercial house for sale in Mandikhatar
-"5,50,00,000",Attractive house on sale in Budhanilkantha
-"4,50,00,000",House on sale at Bafal
-"1,60,00,000","House on sale in Madigaun, Sunakothi"
-"95,00,000","House on sale in Chhaling, Bhaktapur"
+price,name,address,bathroom,floors,bedrooms
+"3,80,00,000",Bungalow house for sale at Mandikhatar,"Mandikhatar, Budhanilkantha Municipality",,,
+"3,80,00,000",Brand new house for sale in Baluwakhani,"Baluwakhani, Budhanilkantha Municipality",,,
+"2,90,00,000","Bungalow house for sale in Bhangal, Budhanilkantha","Bhangal , Budhanilkantha Municipality",,,
+"2,75,00,000",Commercial house for sale in Mandikhatar,"Mandikhatar, Budhanilkantha Municipality",,,
+"5,50,00,000",Attractive house on sale in Budhanilkantha,"Budhanilkantha, Budhanilkantha Municipality",4 Bathrooms,2.5 Floors,4 Bedrooms
+"4,50,00,000",House on sale at Bafal,"Bafal, Nagarjun Municipality",3 Bathrooms,2.5 Floors,6 Bedrooms
+"1,60,00,000","House on sale in Madigaun, Sunakothi","Sunakothi, Lalitpur Metropolitan City",1 Bathrooms,1 Floors,2 Bedrooms
+"95,00,000","House on sale in Chhaling, Bhaktapur","Chhaling, Changunarayan Municipality",1 Bathrooms,1 Floors,2 Bedrooms

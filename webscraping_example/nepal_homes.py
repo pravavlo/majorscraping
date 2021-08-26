@@ -25,11 +25,13 @@ for url in de[0:]: #de has all the links which to iterate and srape prices
     address= driver.find_elements_by_xpath("//div[@id='app']/div[1]/div[2]/p")
     try:
         bathroom = driver.find_elements_by_xpath("//div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div[3]/span")
+        floors = driver.find_elements_by_xpath("//div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div[1]/span")
+        bedrooms = driver.find_elements_by_xpath("//div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div[2]/span")
         for i in range(len(prices)):
-            data.append([prices[i].text.split('.')[1], name[i].text, address[i].text, bathroom[i].text])      
+            data.append([prices[i].text.split('.')[1], name[i].text, address[i].text, bathroom[i].text, floors[i].text, bedrooms[i].text])      
     except IndexError:
      for i in range(len(prices)): 
       data.append([prices[i].text.split('.')[1], name[i].text, address[i].text])
 print(data)
-df = pd.DataFrame(data, columns = ['price', 'name','address','bathroom'])
+df = pd.DataFrame(data, columns = ['price', 'name','address','bathroom', 'floors' ,'bedrooms'])
 df.to_csv('nepal_home_value.csv', index = 0)
